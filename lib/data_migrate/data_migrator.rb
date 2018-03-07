@@ -4,7 +4,7 @@ require "active_record"
 
 module DataMigrate
 
-  class DataMigrator < ActiveRecord::Migrator
+  class DataMigrator < ActiveRecord::MigrationContext
 
     def record_version_state_after_migrating(version)
       if down?
